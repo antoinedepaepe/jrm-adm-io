@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Adaptive Diffusion Models for Sparse-View
+        Motion-Corrected Head Cone-beam CT.">
+  <meta name="keywords" content="Head CBCT, Image Reconstruction, Sparse-View,
+  Motion Correction, Adaptive Diffusion Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adaptive Diffusion Models for Sparse-View
+    Motion-Corrected Head Cone-beam CT.</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/antoinedepaepe">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <!-- <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Adaptive Diffusion Models for Sparse-View
+            Motion-Corrected Head Cone-beam CT.</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/antoinedepaepe">Antoine De Paepe</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://abousse.github.io/">Alexandre Bousse</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/clemphg">Clémentine Phung-Ngoc</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/Mellak">Youness Mellak</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://nouveau.univ-brest.fr/latim/fr/membre/dimitris-visvikis">Dimitris Visvikis</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>LaTIM, Inserm, UMR 1101, Université de Bretagne Occidentale, Brest, France.  </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2504.14033"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2504.14033"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/antoinedepaepe/JRM-ADM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://academictorrents.com/details/47e9d8aab761e75fd0a81982fa62bddf3a173831"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="eyecatcher">
+  <div class="container is-max-desktop">
+      <div class="hero-body">
+          <img src="static/images/admjrm.png">
+          <h2 class="subtitle has-text-centered">
+            <b>Figure 1</b>: of the proposed JRM-ADM method.
+          </h2>
+      </div>
+  </div>
+</section> -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop", style="background-color:#dae8fc8d">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Cone-beam computed tomography (CBCT) is a imaging modality widely used in head and neck diagnostics due to its accessibility and lower radiation dose. However, its relatively long acquisition times make it susceptible to patient motion, especially under sparse-view settings used to reduce dose, which can result in severe image artifacts. In this work, we propose a novel framework, joint reconstruction and motion estimation (JRM) with <b>adaptive diffusion model</b> (ADM), that simultaneously addresses motion compensation and sparse-view reconstruction in head CBCT. Leveraging recent advances in diffusion-based generative models, our method integrates a wavelet-domain diffusion prior into an iterative reconstruction pipeline to guide the solution toward anatomically plausible volumes while estimating rigid motion parameters in a blind fashion. We evaluate our method on simulated motion-affected CBCT data derived from real clinical CT volumes. Experimental results demonstrate that <b>JRM-ADM</b> substantially improves reconstruction quality over traditional model-based and learning-based baselines, particularly in highly undersampled scenarios. Our approach enables motion-robust and low-dose CBCT imaging, paving the way for improved clinical viability.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+          <img src="static/images/admjrm.png">
+          <h2 class="subtitle has-text-centered">
+            <b>Figure 1</b>: Overview of the proposed JRM-ADM method.
+          </h2>
+      </div>
+  </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">JRM-ADM for Sparse-View Motion-Corrected Head Cone-beam CT.</h2>
+        <div class="hero-body">
+            <img src="static/images/results.png">
+            <h2 class="subtitle has-text-centered">
+              <b>Figure 3</b>: Ground truth and reconstructed volumes (axial plane) for motion affected sparse-view CBCT: results are shown for 60-, 40-, and 20-view acquisition settings.
+            </h2>
+        </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@article{de2025adaptive,
+      title={Adaptive Diffusion Models for Sparse-View Motion-Corrected Head Cone-beam CT},
+      author={De Paepe, Antoine and Bousse, Alexandre and Phung-Ngoc, Cl{\'e}mentine and Mellak, Youness and Visvikis, Dimitris},
+      journal={arXiv preprint arXiv:2504.14033},
+      year={2025}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
