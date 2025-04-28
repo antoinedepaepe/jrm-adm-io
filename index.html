@@ -8,7 +8,7 @@
   <meta name="keywords" content="Head CBCT, Image Reconstruction, Sparse-View,
   Motion Correction, Adaptive Diffusion Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Proximal-Enhanced Adaptive Diffusion Models for Sparse-View
+  <title>Adaptive Diffusion Models for Sparse-View
     Motion-Corrected Head Cone-beam CT.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -91,7 +91,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Proximal-Enhanced Adaptive Diffusion Models for Sparse-View
+          <h1 class="title is-1 publication-title">Adaptive Diffusion Models for Sparse-View
             Motion-Corrected Head Cone-beam CT.</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -136,7 +136,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/antoinedepaepe/PADM"
+                <a href="https://github.com/antoinedepaepe/jrm-adm"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -182,7 +182,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Cone-beam computed tomography (CBCT) is a imaging modality widely used in head and neck diagnostics due to its accessibility and lower radiation dose. However, its relatively long acquisition times make it susceptible to patient motion, especially under sparse-view settings used to reduce dose, which can result in severe image artifacts. In this work, we propose a novel framework, joint reconstruction and motion estimation (JRM) with <b>proximal-enhanced adaptive diffusion model</b> (PADM), that simultaneously addresses motion compensation and sparse-view reconstruction in head CBCT. Leveraging recent advances in diffusion-based generative models, our method integrates a wavelet-domain diffusion prior into an iterative reconstruction pipeline to guide the solution toward anatomically plausible volumes while estimating rigid motion parameters in a blind fashion. We evaluate our method on simulated motion-affected CBCT data derived from real clinical CT volumes. Experimental results demonstrate that <b>PADM</b> substantially improves reconstruction quality over traditional model-based and learning-based baselines, particularly in highly undersampled scenarios. Our approach enables motion-robust and low-dose CBCT imaging, paving the way for improved clinical viability.
+          Cone-beam computed tomography (CBCT) is a imaging modality widely used in head and neck diagnostics due to its accessibility and lower radiation dose. However, its relatively long acquisition times make it susceptible to patient motion, especially under sparse-view settings used to reduce dose, which can result in severe image artifacts. In this work, we propose a novel framework, joint reconstruction and motion estimation (JRM) with <b>adaptive diffusion model</b> (ADM), that simultaneously addresses motion compensation and sparse-view reconstruction in head CBCT. Leveraging recent advances in diffusion-based generative models, our method integrates a wavelet-domain diffusion prior into an iterative reconstruction pipeline to guide the solution toward anatomically plausible volumes while estimating rigid motion parameters in a blind fashion. We evaluate our method on simulated motion-affected CBCT data derived from real clinical CT volumes. Experimental results demonstrate that <b>JRM-ADM</b> substantially improves reconstruction quality over traditional model-based and learning-based baselines, particularly in highly undersampled scenarios. Our approach enables motion-robust and low-dose CBCT imaging, paving the way for improved clinical viability.
         </div>
       </div>
     </div>
@@ -193,7 +193,7 @@
       <div class="hero-body">
           <img src="static/images/admjrm.png">
           <h2 class="subtitle has-text-centered">
-            <b>Figure 1</b>: Overview of the proposed PADM method.
+            <b>Figure 1</b>: Overview of the proposed JRM-ADM method.
           </h2>
       </div>
   </div>
@@ -204,7 +204,7 @@
 
 <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">PADM for Sparse-View Motion-Corrected Head Cone-beam CT.</h2>
+      <h2 class="title is-3 has-text-centered">JRM-ADM for Sparse-View Motion-Corrected Head Cone-beam CT.</h2>
         <div class="hero-body">
             <img src="static/images/results.png">
             <h2 class="subtitle has-text-centered">
@@ -220,7 +220,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>@article{de2025adaptive,
-      title={Proximal-Enhanced Adaptive Diffusion Models for Sparse-View Motion-Corrected Head Cone-beam CT},
+      title={Adaptive Diffusion Models for Sparse-View Motion-Corrected Head Cone-beam CT},
       author={De Paepe, Antoine and Bousse, Alexandre and Phung-Ngoc, Cl{\'e}mentine and Mellak, Youness and Visvikis, Dimitris},
       journal={arXiv preprint arXiv:2504.14033},
       year={2025}
